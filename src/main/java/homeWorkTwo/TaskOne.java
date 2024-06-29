@@ -4,18 +4,17 @@ import java.util.Scanner;
 
 public class TaskOne {
     public static void main(String[] args) {
-        while (true) {
-            Scanner scanner = new Scanner(System.in);
-            String inputWords = scanner.nextLine();
-            String[] splitedWords = inputWords.split("\\s+");
-            splitedWords = removeComma(splitedWords);
-            if (checkingWords(splitedWords)) {
-                System.out.println(joinTwoWords(splitedWords[0], splitedWords[1]));
-            } else if (splitedWords.length != 2) {
-                System.out.println("Try again but enter two words with a space between them");
-            } else {
-                System.out.println("Try again but enter words made up of an even number of letters!");
-            }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter two words with a spaces between them and an even number of letters!");
+        String inputWords = scanner.nextLine();
+        String[] splitedWords = inputWords.split("\\s+");
+        splitedWords = removeComma(splitedWords);
+        if (checkingWords(splitedWords)) {
+            System.out.println(joinTwoWords(splitedWords[0], splitedWords[1]));
+        } else if (splitedWords.length != 2) {
+            System.out.println("Try again but enter two words with a space between them");
+        } else {
+            System.out.println("Try again but enter words made up of an even number of letters!");
         }
     }
 
