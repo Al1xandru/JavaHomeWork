@@ -10,7 +10,6 @@ public class Main {
 
     public static void main(String[] args) {
         Car[] array = new Car[INITIAL_CAPACITY_ARRAY];
-        Random random = new Random();
         for(int i = 0; i < 5; i++){
             double randomNumber = ThreadLocalRandom.current().nextDouble(100000.0, 3000000.0);
             array[i] = new Car(Math.round(randomNumber * 100.0) / 100.0, cars[i]);
